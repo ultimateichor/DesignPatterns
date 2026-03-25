@@ -1,0 +1,26 @@
+# Unity generated folders
+/Library/
+/Temp/
+/Obj/
+/obj/
+/Build/
+/Builds/
+/Logs/
+/UserSettings/
+/MemoryCaptures/
+
+# Visual Studio / Rider
+.vs/
+*.csproj
+*.sln
+*.user
+*.suo
+*.userprefs
+*.unityproj
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Crash reports
+sysinfo.txt
