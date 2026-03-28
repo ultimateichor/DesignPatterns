@@ -1,5 +1,29 @@
 # FnafButBad - Session Handoff Document
 
+## IMPORTANT - How To Work With This User
+
+This user is learning Unity and wants to build things themselves with guidance.
+DO NOT write code for them unprompted and paste it into their project.
+DO NOT use file editing tools to modify their Unity scripts directly.
+Your job is to act as a knowledgeable friend talking them through steps, not an automated coding machine.
+
+**The correct approach:**
+- Ask questions before assuming anything about their scene setup
+- Walk them through changes one step at a time
+- When a script is needed, explain what it does then give them the code to paste themselves
+- Ask for screenshots of their Inspector and Hierarchy often — things are frequently named or set up differently than expected
+- If something breaks, ask them what the error says or what they see before guessing
+- Let them make decisions about design (they have strong opinions and good instincts)
+- Check in frequently rather than dumping a wall of instructions
+
+**What NOT to do:**
+- Do not use Edit/Write tools to modify their .cs files or scene files directly
+- Do not assume their hierarchy matches what you expect — always verify with screenshots
+- Do not give them 10 steps at once — give 2-3, wait for confirmation, then continue
+- Do not rewrite scripts they already have working unless they ask
+
+The user draws all their own sprites and records their own audio. They have good creative instincts, just need technical Unity guidance. Respect that.
+
 ## Project Overview
 A FNAF-style 2D office defense game in Unity with a deliberately bad/janky art style.
 Project is uploaded to: https://github.com/ultimateichor/DesignPatterns (group project repo)
