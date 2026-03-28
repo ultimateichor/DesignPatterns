@@ -8,6 +8,10 @@ public class OfficeTurner : MonoBehaviour
     public GameObject leftView;
 
     public CameraMonitorController monitorController;
+    public CanvasGroup gateCanvasGroup;
+    public CanvasGroup doorButtonCanvasGroup;
+    public CanvasGroup simonPanelCanvasGroup;
+    public CanvasGroup samVisualCanvasGroup;
 
     private int currentDirection = 0;
 
@@ -54,5 +58,34 @@ public class OfficeTurner : MonoBehaviour
         rightView.SetActive(currentDirection == 1);
         backView.SetActive(currentDirection == 2);
         leftView.SetActive(currentDirection == 3);
+
+        // Gate only visible facing front (0)
+        if (gateCanvasGroup != null)
+        {
+            gateCanvasGroup.alpha = (currentDirection == 0) ? 1f : 0f;
+            gateCanvasGroup.blocksRaycasts = (currentDirection == 0);
+        }
+
+        // Door button only visible facing left (3)
+        if (doorButtonCanvasGroup != null)
+        {
+            doorButtonCanvasGroup.alpha = (currentDirection == 3) ? 1f : 0f;
+            doorButtonCanvasGroup.blocksRaycasts = (currentDirection == 3);
+        }
+
+        // Simon panel only visible facing front (0)
+        if (simonPanelCanvasGroup != null)
+        {
+            simonPanelCanvasGroup.alpha = (currentDirection == 0) ? 1f : 0f;
+            simonPanelCanvasGroup.blocksRaycasts = (currentDirection == 0);
+        }
+
+        // Sam only visible facing front (0)
+        if (samVisualCanvasGroup != null)
+        {
+            samVisualCanvasGroup.alpha = (currentDirection == 0) ? 1f : 0f;
+            samVisualCanvasGroup.blocksRaycasts = (currentDirection == 0);
+        }
+
     }
 }
