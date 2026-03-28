@@ -73,4 +73,9 @@ public class ToggleDoor : MonoBehaviour, IPointerClickHandler
 
         buttonImage.sprite = isClosed ? closedSprite : openSprite;
     }
+
+    public bool IsDoorClosed()
+    {
+        return isClosed;
+    }
 }

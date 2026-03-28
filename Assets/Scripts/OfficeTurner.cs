@@ -12,6 +12,10 @@ public class OfficeTurner : MonoBehaviour
     public CanvasGroup doorButtonCanvasGroup;
     public CanvasGroup simonPanelCanvasGroup;
     public CanvasGroup samVisualCanvasGroup;
+    public CanvasGroup nSigmaFrontCanvasGroup;
+    public CanvasGroup nSigmaLeftCanvasGroup;
+    public CanvasGroup burtlePanelCanvasGroup;
+
 
     private int currentDirection = 0;
 
@@ -85,6 +89,27 @@ public class OfficeTurner : MonoBehaviour
         {
             samVisualCanvasGroup.alpha = (currentDirection == 0) ? 1f : 0f;
             samVisualCanvasGroup.blocksRaycasts = (currentDirection == 0);
+        }
+
+        // N. Sigma front visual only visible facing front (0)
+        if (nSigmaFrontCanvasGroup != null)
+        {
+            nSigmaFrontCanvasGroup.alpha = (currentDirection == 0) ? 1f : 0f;
+            nSigmaFrontCanvasGroup.blocksRaycasts = false;
+        }
+
+        // N. Sigma left visual only visible facing left (3)
+        if (nSigmaLeftCanvasGroup != null)
+        {
+            nSigmaLeftCanvasGroup.alpha = (currentDirection == 3) ? 1f : 0f;
+            nSigmaLeftCanvasGroup.blocksRaycasts = false;
+        }
+
+        // Burtle panel only visible facing back (2)
+        if (burtlePanelCanvasGroup != null)
+        {
+            burtlePanelCanvasGroup.alpha = (currentDirection == 2) ? 1f : 0f;
+            burtlePanelCanvasGroup.blocksRaycasts = (currentDirection == 2);
         }
 
     }

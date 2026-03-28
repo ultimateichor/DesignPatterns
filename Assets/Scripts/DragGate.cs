@@ -59,6 +59,11 @@ public class DragGate : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         isDragging = false;
     }
 
+    public bool IsGateDown()
+    {
+        return gateRect != null && gateRect.anchoredPosition.y <= downY + 80f;
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
         if (!isDragging)
