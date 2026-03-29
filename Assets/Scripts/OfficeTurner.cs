@@ -26,6 +26,15 @@ public class OfficeTurner : MonoBehaviour
 
     void Update()
     {
+        // Keep BurtlePanel hidden when monitor is open, even if facing back
+        if (burtlePanelCanvasGroup != null)
+        {
+            bool monitorOpen = monitorController != null && monitorController.IsMonitorOpen();
+            bool showBurtle = (currentDirection == 2) && !monitorOpen;
+            burtlePanelCanvasGroup.alpha = showBurtle ? 1f : 0f;
+            burtlePanelCanvasGroup.blocksRaycasts = showBurtle;
+        }
+
         if (monitorController != null && monitorController.IsMonitorOpen())
         {
             return;
